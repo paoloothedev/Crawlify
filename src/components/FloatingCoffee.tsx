@@ -1,36 +1,43 @@
 import React from 'react';
-import { Coffee, Github, Instagram, Linkedin, Globe, MessageCircle } from 'lucide-react';
+import { Github, Instagram, Linkedin, Globe } from 'lucide-react';
 import { useThemeStore } from '../lib/theme';
+
+function TikTokIcon({ className }: { className?: string }) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="currentColor">
+      <path d="M19.59 6.69A4.83 4.83 0 0 1 15.82 2.44v-.44h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.9 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.3 0 .59.05.86.14v-3.5a6.37 6.37 0 0 0-.86-.05A6.34 6.34 0 0 0 3.12 15.7a6.34 6.34 0 0 0 6.35 6.34 6.34 6.34 0 0 0 6.35-6.34V11.2a8.24 8.24 0 0 0 4.77 1.5v-3.45a4.84 4.84 0 0 1-3-2.56z" />
+    </svg>
+  );
+}
 
 export function FloatingCoffee() {
   const isDarkMode = useThemeStore(state => state.isDarkMode);
   const links = [
     {
       icon: <Github className="h-6 w-6" />,
-      url: "https://github.com/lordpaoloo",
+      url: "https://github.com/paoloothedev",
       color: "hover:text-gray-700"
     },
     {
       icon: <Instagram className="h-6 w-6" />,
-      url: "https://instagram.com/lordpaoloo",
+      url: "https://instagram.com/paoloothedev",
       color: "hover:text-pink-600"
+    },
+    {
+      icon: <TikTokIcon className="h-6 w-6" />,
+      url: "https://tiktok.com/@paoloothedev",
+      color: "hover:text-gray-900"
     },
     {
       icon: <Linkedin className="h-6 w-6" />,
       url: "https://linkedin.com/in/yousef-mohamad-073814355",
       color: "hover:text-blue-600"
     },
-
     {
       icon: <Globe className="h-6 w-6" />,
-      url: "https://lordpaoloo.github.io/",
+      url: "https://paoloothedev.com",
       color: "hover:text-green-500"
-    },
-    {
-      icon: <MessageCircle className="h-6 w-6" />,
-      url: "https://discord.com/users/939517004895911986",
-      color: "hover:text-indigo-500"
-    },
+    }
   ];
 
   return (
@@ -47,18 +54,6 @@ export function FloatingCoffee() {
           {link.icon}
         </a>
       ))}
-      <a
-        href="https://ko-fi.com/yousefmohamad"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="bg-[#FF6433] hover:bg-[#fa4e0a]/90 text-black px-4 py-2 rounded-lg shadow-lg 
-          transform transition-all duration-200 hover:scale-105 hover:shadow-xl"
-      >
-        <div className="flex items-center">
-          <Coffee className="h-5 w-5" />
-          <span className="ml-2 font-medium">Support</span>
-        </div>
-      </a>
     </div>
   );
 }

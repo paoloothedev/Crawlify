@@ -1,4 +1,4 @@
-// Built by lordpaoloo (https://github.com/lordpaoloo)
+// Built by paoloothedev (https://github.com/paoloothedev)
 import React, { useEffect } from 'react';
 import { TaskForm } from './components/TaskForm';
 import { TaskList } from './components/TaskList';

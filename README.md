@@ -14,7 +14,7 @@ Crawlify is an efficient web scraping tool designed to help developers, research
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/lordpaoloo/Crawlify.git
+   git clone https://github.com/paoloothedev/Crawlify.git
    ```
 2. Install dependencies:
    ```bash
